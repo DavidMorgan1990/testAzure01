@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MuDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="MuDatabaseModelStoreContainer">
+          <EntitySet Name="ContactStatus" EntityType="MuDatabaseModel.Store.ContactStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ContactType" EntityType="MuDatabaseModel.Store.ContactType" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmployeeMaster" EntityType="MuDatabaseModel.Store.EmployeeMaster" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="JobFunction" EntityType="MuDatabaseModel.Store.JobFunction" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Notes" EntityType="MuDatabaseModel.Store.Notes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RelationshipType" EntityType="MuDatabaseModel.Store.RelationshipType" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ContactStatus">
+          <Key>
+            <PropertyRef Name="ContactStatus" />
+          </Key>
+          <Property Name="ContactStatus" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ContactType">
+          <Key>
+            <PropertyRef Name="ContactType" />
+          </Key>
+          <Property Name="ContactType" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EmployeeMaster">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContactStatus" Type="varchar(max)" />
+          <Property Name="DateLastUpdated" Type="varchar(max)" />
+          <Property Name="DateCreated" Type="varchar(max)" />
+          <Property Name="CreatedBy" Type="varchar(max)" />
+          <Property Name="UpdatedBy" Type="varchar(max)" />
+          <Property Name="FirstName" Type="varchar(max)" />
+          <Property Name="LastName" Type="varchar(max)" />
+          <Property Name="Organization" Type="varchar(max)" />
+          <Property Name="RelationshipType" Type="varchar(max)" />
+          <Property Name="ContactType" Type="varchar(max)" />
+          <Property Name="JobTitle" Type="varchar(max)" />
+          <Property Name="JobFunction" Type="varchar(max)" />
+          <Property Name="DoNotContact" Type="varchar(max)" />
+          <Property Name="OptedInEmail" Type="varchar(max)" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="Address1" Type="varchar(max)" />
+          <Property Name="Address2" Type="varchar(max)" />
+          <Property Name="City" Type="varchar(max)" />
+          <Property Name="State" Type="varchar(max)" />
+          <Property Name="PostCode" Type="varchar(max)" />
+          <Property Name="Country" Type="varchar(max)" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="Website" Type="varchar(max)" />
+          <Property Name="OtherSocialProfiles" Type="varchar(max)" />
+          <Property Name="LinkedinProfile" Type="varchar(max)" />
+          <Property Name="ContactName" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="JobFunction">
+          <Key>
+            <PropertyRef Name="JobFunction" />
+          </Key>
+          <Property Name="JobFunction" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Notes">
+          <Key>
+            <PropertyRef Name="NotesID" />
+          </Key>
+          <Property Name="NotesID" Type="int" Nullable="false" />
+          <Property Name="ContactName" Type="varchar(max)" />
+          <Property Name="Organization" Type="varchar(max)" />
+          <Property Name="DateCreated" Type="varchar(max)" />
+          <Property Name="Note" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="RelationshipType">
+          <Key>
+            <PropertyRef Name="RelationshipType" />
+          </Key>
+          <Property Name="RelationshipType" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MuDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="MuDatabaseEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ContactStatus" EntityType="MuDatabaseModel.ContactStatu" />
+          <EntitySet Name="ContactTypes" EntityType="MuDatabaseModel.ContactType" />
+          <EntitySet Name="EmployeeMasters" EntityType="MuDatabaseModel.EmployeeMaster" />
+          <EntitySet Name="JobFunctions" EntityType="MuDatabaseModel.JobFunction" />
+          <EntitySet Name="Notes" EntityType="MuDatabaseModel.Note" />
+          <EntitySet Name="RelationshipTypes" EntityType="MuDatabaseModel.RelationshipType" />
+        </EntityContainer>
+        <EntityType Name="ContactStatu">
+          <Key>
+            <PropertyRef Name="ContactStatus" />
+          </Key>
+          <Property Name="ContactStatus" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="ContactType">
+          <Key>
+            <PropertyRef Name="ContactType1" />
+          </Key>
+          <Property Name="ContactType1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="EmployeeMaster">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ContactStatus" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" Nullable="false" />
+          <Property Name="DateLastUpdated" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DateCreated" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="CreatedBy" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="UpdatedBy" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Organization" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="RelationshipType" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ContactType" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="JobTitle" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="JobFunction" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DoNotContact" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="OptedInEmail" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Address1" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="PostCode" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Website" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="OtherSocialProfiles" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="LinkedinProfile" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ContactName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="JobFunction">
+          <Key>
+            <PropertyRef Name="JobFunction1" />
+          </Key>
+          <Property Name="JobFunction1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Note">
+          <Key>
+            <PropertyRef Name="NotesID" />
+          </Key>
+          <Property Name="NotesID" Type="Int32" Nullable="false" />
+          <Property Name="ContactName" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Organization" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="DateCreated" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Note1" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="RelationshipType">
+          <Key>
+            <PropertyRef Name="RelationshipType1" />
+          </Key>
+          <Property Name="RelationshipType1" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MuDatabaseModelStoreContainer" CdmEntityContainer="MuDatabaseEntities">
+          <EntitySetMapping Name="ContactStatus">
+            <EntityTypeMapping TypeName="MuDatabaseModel.ContactStatu">
+              <MappingFragment StoreEntitySet="ContactStatus">
+                <ScalarProperty Name="ContactStatus" ColumnName="ContactStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ContactTypes">
+            <EntityTypeMapping TypeName="MuDatabaseModel.ContactType">
+              <MappingFragment StoreEntitySet="ContactType">
+                <ScalarProperty Name="ContactType1" ColumnName="ContactType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmployeeMasters">
+            <EntityTypeMapping TypeName="MuDatabaseModel.EmployeeMaster">
+              <MappingFragment StoreEntitySet="EmployeeMaster">
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="ContactStatus" ColumnName="ContactStatus" />
+                <ScalarProperty Name="DateLastUpdated" ColumnName="DateLastUpdated" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Organization" ColumnName="Organization" />
+                <ScalarProperty Name="RelationshipType" ColumnName="RelationshipType" />
+                <ScalarProperty Name="ContactType" ColumnName="ContactType" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="JobFunction" ColumnName="JobFunction" />
+                <ScalarProperty Name="DoNotContact" ColumnName="DoNotContact" />
+                <ScalarProperty Name="OptedInEmail" ColumnName="OptedInEmail" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="OtherSocialProfiles" ColumnName="OtherSocialProfiles" />
+                <ScalarProperty Name="LinkedinProfile" ColumnName="LinkedinProfile" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="JobFunctions">
+            <EntityTypeMapping TypeName="MuDatabaseModel.JobFunction">
+              <MappingFragment StoreEntitySet="JobFunction">
+                <ScalarProperty Name="JobFunction1" ColumnName="JobFunction" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notes">
+            <EntityTypeMapping TypeName="MuDatabaseModel.Note">
+              <MappingFragment StoreEntitySet="Notes">
+                <ScalarProperty Name="NotesID" ColumnName="NotesID" />
+                <ScalarProperty Name="ContactName" ColumnName="ContactName" />
+                <ScalarProperty Name="Organization" ColumnName="Organization" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="Note1" ColumnName="Note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RelationshipTypes">
+            <EntityTypeMapping TypeName="MuDatabaseModel.RelationshipType">
+              <MappingFragment StoreEntitySet="RelationshipType">
+                <ScalarProperty Name="RelationshipType1" ColumnName="RelationshipType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

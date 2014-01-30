@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="100hoursCRM" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="Add write permission to App_Data Folder" description="Add write permission to App_Data folder" value="100hoursCRM/App_Data" tags="Hidden">
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp\\App_Data$" />
+  </parameter>
+  <parameter name="aspnetEntities-Web.config Connection String" description="" value="metadata=res://*/MyModel2.csdl|res://*/MyModel2.ssdl|res://*/MyModel2.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDb)\v11.0;attachdbfilename=|DataDirectory|\aspnet-Test100Hours3-20131217193221.mdf;initial catalog=aspnet-Test100Hours3-20131217193221;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='aspnetEntities']/@connectionString" />
+  </parameter>
+  <parameter name="ConnectionString-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\MuDatabase.mdf;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString']/@connectionString" />
+  </parameter>
+  <parameter name="ConnectionString2-Web.config Connection String" description="" value="Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\aspnet-Test100Hours3-20131217193221.mdf;Initial Catalog=aspnet-Test100Hours3-20131217193221;Integrated Security=True;MultipleActiveResultSets=True;Application Name=EntityFramework" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ConnectionString2']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-Test100Hours3-20131217193221;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-Test100Hours3-20131217193221.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MuDatabaseEntities-Web.config Connection String" description="" value="metadata=res://*/MyModel.csdl|res://*/MyModel.ssdl|res://*/MyModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\v11.0;attachdbfilename=|DataDirectory|\MuDatabase.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\DavidMorgan\\Documents\\Visual\ Studio\ 2012\\Projects\\TSETqueries\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MuDatabaseEntities']/@connectionString" />
+  </parameter>
+</parameters>

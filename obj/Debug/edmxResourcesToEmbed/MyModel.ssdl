@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MuDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MuDatabaseModelStoreContainer">
+    <EntitySet Name="ContactStatus" EntityType="MuDatabaseModel.Store.ContactStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ContactType" EntityType="MuDatabaseModel.Store.ContactType" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployeeMaster" EntityType="MuDatabaseModel.Store.EmployeeMaster" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobFunction" EntityType="MuDatabaseModel.Store.JobFunction" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notes" EntityType="MuDatabaseModel.Store.Notes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RelationshipType" EntityType="MuDatabaseModel.Store.RelationshipType" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="ContactStatus">
+    <Key>
+      <PropertyRef Name="ContactStatus" />
+    </Key>
+    <Property Name="ContactStatus" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ContactType">
+    <Key>
+      <PropertyRef Name="ContactType" />
+    </Key>
+    <Property Name="ContactType" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EmployeeMaster">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContactStatus" Type="varchar(max)" />
+    <Property Name="DateLastUpdated" Type="varchar(max)" />
+    <Property Name="DateCreated" Type="varchar(max)" />
+    <Property Name="CreatedBy" Type="varchar(max)" />
+    <Property Name="UpdatedBy" Type="varchar(max)" />
+    <Property Name="FirstName" Type="varchar(max)" />
+    <Property Name="LastName" Type="varchar(max)" />
+    <Property Name="Organization" Type="varchar(max)" />
+    <Property Name="RelationshipType" Type="varchar(max)" />
+    <Property Name="ContactType" Type="varchar(max)" />
+    <Property Name="JobTitle" Type="varchar(max)" />
+    <Property Name="JobFunction" Type="varchar(max)" />
+    <Property Name="DoNotContact" Type="varchar(max)" />
+    <Property Name="OptedInEmail" Type="varchar(max)" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Address1" Type="varchar(max)" />
+    <Property Name="Address2" Type="varchar(max)" />
+    <Property Name="City" Type="varchar(max)" />
+    <Property Name="State" Type="varchar(max)" />
+    <Property Name="PostCode" Type="varchar(max)" />
+    <Property Name="Country" Type="varchar(max)" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="Website" Type="varchar(max)" />
+    <Property Name="OtherSocialProfiles" Type="varchar(max)" />
+    <Property Name="LinkedinProfile" Type="varchar(max)" />
+    <Property Name="ContactName" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="JobFunction">
+    <Key>
+      <PropertyRef Name="JobFunction" />
+    </Key>
+    <Property Name="JobFunction" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Notes">
+    <Key>
+      <PropertyRef Name="NotesID" />
+    </Key>
+    <Property Name="NotesID" Type="int" Nullable="false" />
+    <Property Name="ContactName" Type="varchar(max)" />
+    <Property Name="Organization" Type="varchar(max)" />
+    <Property Name="DateCreated" Type="varchar(max)" />
+    <Property Name="Note" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="RelationshipType">
+    <Key>
+      <PropertyRef Name="RelationshipType" />
+    </Key>
+    <Property Name="RelationshipType" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+</Schema>
